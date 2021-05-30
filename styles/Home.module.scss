@@ -2,6 +2,12 @@
 
 .title {
   font-family: "Indie Flower", cursive;
+  font-size: 4rem;
+  color: $primary-colour;
+
+  &:hover {
+    color: $highlight-colour;
+  }
 }
 
 .subtitle {
