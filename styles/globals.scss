@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat&family=Roboto+Slab&display=swap");
+@import "./palette.scss";
 
 html,
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: $background-colour;
+  color: $primary-colour;
 }
