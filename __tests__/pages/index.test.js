@@ -1,28 +1,15 @@
 import React from "react";
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
+
+import Enzyme from "enzyme";
+import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
+Enzyme.configure({ adapter: new Adapter() });
+
 import Home from "../../pages/index";
 
 describe("home", () => {
-  let container = null;
-  beforeEach(() => {
-    // setup a DOM element as a render target
-    container = document.createElement("div");
-    document.body.appendChild(container);
-  });
-
   it("should render a navbar component", () => {
-    act(() => {
-      render(<Home />, container);
-    });
+    let wrapper = Enzyme.shallow(<Home />);
 
-    expect(container.querySelectorAll("NavBar").length).toEqual(1);
-  });
-
-  afterEach(() => {
-    // cleanup on exiting
-    unmountComponentAtNode(container);
-    container.remove();
-    container = null;
+    expect(wrapper.find("NavBar").length).toEqual(1);
   });
 });

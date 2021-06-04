@@ -1,0 +1,40 @@
+@import "../../styles/palette.scss";
+
+.navigation {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  background-color: $primary-colour;
+  justify-content: flex-end;
+}
+
+.navigationItem {
+  padding: 10px 25px;
+  border-bottom: 3px solid $primary-colour;
+  font-family: "Indie Flower", cursive;
+  font-size: x-large;
+
+  a {
+    color: $highlight-colour;
+    text-decoration: none;
+  }
+
+  &:hover {
+    border-bottom: 3px solid $highlight-colour;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .navigationItem {
+    font-size: large;
+    padding: 10px 15px;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .navigationItem {
+    padding: 10px 15px;
+  }
+}
