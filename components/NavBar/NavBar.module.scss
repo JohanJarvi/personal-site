@@ -26,6 +26,18 @@
   }
 }
 
+.viewing {
+  a {
+    color: $background-colour;
+  }
+
+  &:hover {
+    border-bottom: 3px solid $background-colour;
+  }
+
+  border-bottom: 3px solid $primary-colour;
+}
+
 @media all and (max-width: 500px) {
   .navigationItem {
     font-size: large;
