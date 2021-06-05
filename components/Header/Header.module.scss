@@ -2,7 +2,12 @@
 
 .title {
   margin-left: 15%;
-  font-family: "Indie Flower", cursive;
-  font-size: 4rem;
+  font-family: "Cardo", serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
   color: $primary-colour;
+
+  &::first-letter {
+    font-size: 4rem;
+  }
 }
