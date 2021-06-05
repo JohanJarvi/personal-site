@@ -11,12 +11,14 @@
 }
 
 .navigationItem {
-  padding: 10px 25px;
+  //   padding: 10px 25px;
   border-bottom: 3px solid $primary-colour;
   font-family: "Indie Flower", cursive;
   font-size: x-large;
 
   a {
+    display: block;
+    padding: 10px 25px;
     color: $highlight-colour;
     text-decoration: none;
   }
@@ -41,12 +43,18 @@
 @media all and (max-width: 500px) {
   .navigationItem {
     font-size: large;
-    padding: 10px 15px;
+
+    a {
+      padding: 10px 15px;
+    }
   }
 }
 
 @media all and (max-width: 350px) {
   .navigationItem {
-    padding: 10px 15px;
+    font-size: large;
+    a {
+      padding: 10px 15px;
+    }
   }
 }
