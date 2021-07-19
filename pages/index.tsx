@@ -16,7 +16,7 @@ export default function Home() {
       I possess a wide range of skills in mobile, web, robotics and databases.`}
           />
         </div>
-        <img className={styles.ocean} src="/me_surf.jpeg" />
+        <img className={styles.ocean} alt="surf picture" src="/me_surf.jpeg" />
       </div>
     </div>
   );
