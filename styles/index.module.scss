@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.ocean {
+  height: 427px;
+  width: 640px;
+  border-radius: 15%;
+  display: block;
+}
+
+@media all and (max-width: 500px) {
+  .ocean {
+    flex-direction: column;
+    height: 200px;
+    width: 320px;
+  }
+}

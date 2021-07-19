@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar/NavBar";
 export default function Blog() {
   return (
     <div>
-      <NavBar links={["johan.", "about.", "resume.", "blog."]}></NavBar>
+      <NavBar links={["johan", "about", "resume", "blog"]} />
       <h1>blog.</h1>
     </div>
   );
