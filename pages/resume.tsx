@@ -39,7 +39,9 @@ export default function Resume() {
                   <Typography variant="subtitle2" color="text.secondary">
                     Feb 2020 - Present
                   </Typography>
-                  <Typography variant="h5">Australian Droid + Robot</Typography>
+                  <Typography variant="h5">
+                    <strong>Australian Droid + Robot</strong>
+                  </Typography>
                   <Typography>
                     <br />
                     When I worked for ADR they were a small robotics startup in
@@ -51,7 +53,7 @@ export default function Resume() {
                     Key achievements included:
                     <ul>
                       <li>
-                        Achieving <em>real time</em> video and robot control
+                        Achieving <em>real-time</em> video and robot control
                         using <strong>WebRTC</strong> with JavaScript and
                         Android
                       </li>
