@@ -6,13 +6,7 @@ import {
   TimelineItem,
   TimelineSeparator,
 } from "@mui/lab";
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar/NavBar";
 
@@ -115,7 +109,6 @@ export default function Resume() {
           <TimelineItem>
             <TimelineSeparator>
               <TimelineDot color="primary" />
-              <TimelineConnector sx={{ bgcolor: "primary.main" }} />
             </TimelineSeparator>
             <TimelineContent>
               <Card sx={{ textAlign: "left" }}>
@@ -123,19 +116,23 @@ export default function Resume() {
               </Card>
             </TimelineContent>
           </TimelineItem>
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineDot color="info" />
-              {/* <TimelineConnector sx={{ bgcolor: "primary.main" }} /> */}
-            </TimelineSeparator>
-            <TimelineContent>
-              <Card>
-                <CardContent>Hello world?</CardContent>
-              </Card>
-            </TimelineContent>
-          </TimelineItem>
         </Timeline>
-      ) : null}
+      ) : (
+        <Box padding={3}>
+          <Grid container direction="column" spacing={3}>
+            <Grid item>
+              <Card>
+                <CardContent>{getFirstCardContent()}</CardContent>
+              </Card>
+            </Grid>
+            <Grid item>
+              <Card>
+                <CardContent>{getSecondCardContent()}</CardContent>
+              </Card>
+            </Grid>
+          </Grid>
+        </Box>
+      )}
     </div>
   );
 }
