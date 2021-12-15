@@ -90,11 +90,44 @@ export default function Resume() {
     );
   };
 
+  const getThirdCardContent = () => {
+    return (
+      <React.Fragment>
+        <Typography variant="subtitle2" color="text.secondary">
+          Mar 2018 - May 2019
+        </Typography>
+        <Typography variant="h5">
+          <strong>Cummings Technologies</strong>
+        </Typography>
+        <Typography>
+          <br />
+          At Cummings Technologies I learnt almost all my Software Engineering
+          fundamentals including how to use Git efficiently, as well as the
+          ideas behind Object Oriented Programming and much more.
+          <br />
+          <br />
+          Key achievements included:
+          <ul>
+            <li>
+              Learning how to develop well tested, maintainable and scalable
+              software solutions using Java 8 through to 11.
+            </li>
+            <li>
+              Successfully obtaining and manipulating large datasets using Java
+              with PosgresSQL
+            </li>
+            <li>Discovering and beginning my journey toward mastering Vim</li>
+          </ul>
+        </Typography>
+      </React.Fragment>
+    );
+  };
+
   return (
     <div>
       <NavBar links={["johan", "resume", "blog"]} />
       {width > 700 ? (
-        <Timeline position="alternate">
+        <Timeline position="alternate" style={{ marginTop: 75 }}>
           <TimelineItem>
             <TimelineSeparator>
               <TimelineDot color="secondary" />
@@ -109,6 +142,7 @@ export default function Resume() {
           <TimelineItem>
             <TimelineSeparator>
               <TimelineDot color="primary" />
+              <TimelineConnector sx={{ bgcolor: "primary.main" }} />
             </TimelineSeparator>
             <TimelineContent>
               <Card sx={{ textAlign: "left" }}>
@@ -116,9 +150,19 @@ export default function Resume() {
               </Card>
             </TimelineContent>
           </TimelineItem>
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineDot color="info" />
+            </TimelineSeparator>
+            <TimelineContent>
+              <Card sx={{ textAlign: "left" }}>
+                <CardContent>{getThirdCardContent()}</CardContent>
+              </Card>
+            </TimelineContent>
+          </TimelineItem>
         </Timeline>
       ) : (
-        <Box padding={3}>
+        <Box padding={3} style={{ marginTop: 75 }}>
           <Grid container direction="column" spacing={3}>
             <Grid item>
               <Card>
@@ -128,6 +172,11 @@ export default function Resume() {
             <Grid item>
               <Card>
                 <CardContent>{getSecondCardContent()}</CardContent>
+              </Card>
+            </Grid>
+            <Grid item>
+              <Card>
+                <CardContent>{getThirdCardContent()}</CardContent>
               </Card>
             </Grid>
           </Grid>
