@@ -123,11 +123,43 @@ export default function Resume() {
     );
   };
 
+  const getFourthCardContent = () => {
+    return (
+      <React.Fragment>
+        <Typography variant="subtitle2" color="text.secondary">
+          Jul 2017 - Mar 2018
+        </Typography>
+        <Typography variant="h5">
+          <strong>Praesidium</strong>
+        </Typography>
+        <Typography>
+          <br />
+          Praesidium was my first full time job out of University and was a very
+          varied role that started off with a lot of mechatronics and hardware
+          integration into software and ended up with Android Development that
+          ultimately pointed me down the road to becoming a Software Engineer.
+          <br />
+          <br />
+          Key achievements included:
+          <ul>
+            <li>
+              Building an Android App that could control a land based robot
+            </li>
+            <li>
+              Streaming video at decent latency in Android using open source
+              LibVLC
+            </li>
+          </ul>
+        </Typography>
+      </React.Fragment>
+    );
+  };
+
   return (
     <div>
       <NavBar links={["johan", "resume", "blog"]} />
       {width > 700 ? (
-        <Timeline position="alternate" style={{ marginTop: 75 }}>
+        <Timeline position="alternate" className="under-navbar">
           <TimelineItem>
             <TimelineSeparator>
               <TimelineDot color="secondary" />
@@ -153,10 +185,21 @@ export default function Resume() {
           <TimelineItem>
             <TimelineSeparator>
               <TimelineDot color="info" />
+              <TimelineConnector sx={{ bgcolor: "primary.main" }} />
             </TimelineSeparator>
             <TimelineContent>
               <Card sx={{ textAlign: "left" }}>
                 <CardContent>{getThirdCardContent()}</CardContent>
+              </Card>
+            </TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineDot color="secondary" />
+            </TimelineSeparator>
+            <TimelineContent>
+              <Card sx={{ textAlign: "left" }}>
+                <CardContent>{getFourthCardContent()}</CardContent>
               </Card>
             </TimelineContent>
           </TimelineItem>
@@ -177,6 +220,11 @@ export default function Resume() {
             <Grid item>
               <Card>
                 <CardContent>{getThirdCardContent()}</CardContent>
+              </Card>
+            </Grid>
+            <Grid item>
+              <Card>
+                <CardContent>{getFourthCardContent()}</CardContent>
               </Card>
             </Grid>
           </Grid>
