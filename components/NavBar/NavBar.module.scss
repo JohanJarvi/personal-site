@@ -1,13 +1,19 @@
 @import "../../styles/palette.scss";
 
 .navigation {
+  z-index: 1;
+  position: fixed;
+  width: 100vw;
   margin: 0;
   padding: 0;
+  top: 0;
   display: flex;
   flex-flow: row wrap;
   list-style: none;
   background-color: $primary-colour;
   justify-content: flex-end;
+  height: 75px;
+  filter: drop-shadow(0px 4px 4px $shadow-colour);
 }
 
 .navigationItem {

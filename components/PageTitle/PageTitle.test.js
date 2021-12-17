@@ -4,15 +4,15 @@ import Enzyme from "enzyme";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 Enzyme.configure({ adapter: new Adapter() });
 
-import Header from "./Header";
+import PageTitle from "./PageTitle";
 
-describe("Header", () => {
+describe("PageTitle", () => {
   it("should render the title provided as the property", () => {
     const props = {
       title: "Test Title",
     };
 
-    let wrapper = Enzyme.shallow(<Header {...props} />);
+    let wrapper = Enzyme.shallow(<PageTitle {...props} />);
 
     expect(wrapper.text()).toEqual("Test Title");
   });
