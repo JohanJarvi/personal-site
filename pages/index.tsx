@@ -1,15 +1,13 @@
-import { Typography } from "@mui/material";
 import React from "react";
 import Blurb from "../components/Blurb/Blurb";
 import PageTitle from "../components/PageTitle/PageTitle";
 import NavBar from "../components/NavBar/NavBar";
-import styles from "../styles/index.module.scss";
 
 export default function Home() {
   return (
     <div>
-      <NavBar links={["johan", "resume", "blog"]} />
-      <div className={styles.container + " " + "under-navbar"}>
+      <NavBar />
+      <div>
         <div>
           <PageTitle title="Johan" />
           <Blurb
@@ -18,16 +16,12 @@ export default function Home() {
           />
         </div>
         <figure>
-          <img
-            className={styles.ocean}
-            alt="surf picture"
-            src="/me_surf.jpeg"
-          />
+          <img alt="surf picture" src="/me_surf.jpeg" />
           <figcaption style={{ marginTop: 20 }}>
-            <Typography color="secondary">
+            <p>
               Fun fact; this entire website was built using colours in the above
               image.
-            </Typography>
+            </p>
           </figcaption>
         </figure>
       </div>

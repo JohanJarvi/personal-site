@@ -1,15 +1,7 @@
-// @import url("https://fonts.googleapis.com/css2?family=Cardo&family=Montserrat&family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Montserrat&family=Roboto&display=swap");
-@import "./palette.scss";
-
 html,
 body {
+  background: #e2dbdb;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  color: $text-colour;
-}
-
-.under-navbar {
-  margin-top: 75px;
+  font-family: Arial, Helvetica, sans-serif;
 }

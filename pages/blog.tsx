@@ -5,7 +5,7 @@ import NavBar from "../components/NavBar/NavBar";
 export default function Blog() {
   return (
     <div>
-      <NavBar links={["johan", "resume", "blog"]} />
+      <NavBar />
       <div className="under-navbar">
         <PageTitle title="Coming soon." />
       </div>
